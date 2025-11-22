@@ -4,6 +4,7 @@ import { FormValidator } from "./Contact.module.js";
 import { MealFilterManager, MealManager } from "./MealService.module.js";
 //!==============================  End import module js  ==============================!//
 
+//!============================== Start initate DOM Elements  ==============================!//
 const sections = {
   main: document.querySelector("section.allMeals"),
   details: document.querySelector("section.details"),
@@ -37,11 +38,15 @@ const navbarElements = {
 };
 
 const closeDetailsBtn = document.querySelector(".details button");
+//!==============================  End initate DOM Elements  ==============================!//
 
+//!============================== Start initate Instances ==============================!//
 const mealManager = new MealManager();
 const filterManager = new MealFilterManager();
 const validator = new FormValidator();
+//!==============================  End initate Instances  ==============================!//
 
+//!============================== Start Helper Functions ==============================!//
 function showSection(sectionName) {
   if (navbarElements.container.classList.contains("show-menu")) {
     toggleNavbar();
@@ -58,14 +63,18 @@ function toggleNavbar() {
   navbarElements.iconSymbol.classList.toggle("fa-bars");
   navbarElements.iconSymbol.classList.toggle("fa-x");
 }
+//!==============================  End Helper Functions  ==============================!//
 
+//!============================== Start Main Logic ==============================!//
 mealManager.getMeals();
 
 const contactInputs = document.querySelectorAll("#contactUs input");
 contactInputs.forEach((input) => {
   input.addEventListener("keyup", ({ target }) => validator.validate(target));
 });
+//!==============================  End Main Logic  ==============================!//
 
+//!============================== Start Event Listeners ==============================!//
 navbarElements.icon.addEventListener("click", toggleNavbar);
 
 closeDetailsBtn.addEventListener("click", () => {
@@ -108,134 +117,4 @@ navLinks.ingredients.addEventListener("click", async () => {
 navLinks.contact.addEventListener("click", () => {
   showSection("contact");
 });
-
-// // ======================================== Start import modules ============================================= //
-// import { FormValidator } from "./contact.module.js";
-// import { MealFilterManager, MealManager } from "./MealService.module.js";
-// // ========================================  End import modules ============================================= //
-
-// const allMealsSection = document.querySelector("section.allMeals");
-
-// const getcategoriesSection = document.getElementById(
-//   "categoriesAreaIngredients"
-// );
-// const closeDetailsSection = document.querySelector(".details button");
-// const detailsSection = document.querySelector("section.details");
-
-// closeDetailsSection.addEventListener("click", () => {
-//   detailsSection.classList.add("d-none");
-//   allMealsSection.classList.remove("d-none");
-// });
-
-// const mealManager = new MealManager();
-// mealManager.getMeals();
-// // navbar
-// const navbarIcon = document.querySelector(".my-navbar .bar");
-// const iconElement = document.querySelector(".my-navbar .bar i");
-// const navLinksContainer = document.querySelector(".my-navbar");
-
-// navbarIcon.addEventListener("click", () => {
-//   openCloseNavbar();
-// });
-// function openCloseNavbar() {
-//   navLinksContainer.classList.toggle("my-d-none-navbar");
-//   navLinksContainer.classList.toggle("show-menu");
-//   iconElement.classList.toggle("fa-bars");
-//   iconElement.classList.toggle("fa-x");
-// }
-
-// const searchForMael = document.getElementById("search-for-mael");
-
-// const search = document.querySelector(
-//   ".my-navbar .linkList .links ul li:nth-child(1)"
-// );
-// search.addEventListener("click", () => {
-//   openCloseNavbar();
-//   allMealsSection.classList.add("d-none");
-//   getcategoriesSection.classList.add("d-none");
-//   contactUs.classList.add("d-none");
-//   detailsSection.classList.add("d-none");
-
-//   searchForMael.classList.remove("d-none");
-// });
-
-// const SearchByName = document.getElementById("SearchByName");
-// SearchByName.addEventListener("blur", async (e) => {
-//   await mealManager.getMeals(e.target.value);
-// });
-// const SearchByFirstLetter = document.getElementById("SearchByFirstLetter");
-// SearchByFirstLetter.addEventListener("input", async ({ target }) => {
-//   await mealManager.getMealsByLetter(target.value);
-// });
-
-// const filterManager = new MealFilterManager();
-
-// const categories = document.querySelector(
-//   ".my-navbar .linkList .links ul li:nth-child(2)"
-// );
-
-// categories.addEventListener("click", async () => {
-//   openCloseNavbar();
-
-//   allMealsSection.classList.add("d-none");
-//   searchForMael.classList.add("d-none");
-//   detailsSection.classList.add("d-none");
-//   contactUs.classList.add("d-none");
-//   getcategoriesSection.classList.remove("d-none");
-
-//   await filterManager.getAllCategories();
-// });
-
-// const area = document.querySelector(
-//   ".my-navbar .linkList .links ul li:nth-child(3)"
-// );
-
-// area.addEventListener("click", async () => {
-//   openCloseNavbar();
-//   allMealsSection.classList.add("d-none");
-//   searchForMael.classList.add("d-none");
-//   detailsSection.classList.add("d-none");
-//   contactUs.classList.add("d-none");
-//   getcategoriesSection.classList.remove("d-none");
-
-//   await filterManager.getAllAreas();
-// });
-
-// const ingredients = document.querySelector(
-//   ".my-navbar .linkList .links ul li:nth-child(4)"
-// );
-// ingredients.addEventListener("click", async () => {
-//   openCloseNavbar();
-//   allMealsSection.classList.add("d-none");
-//   detailsSection.classList.add("d-none");
-//   contactUs.classList.add("d-none");
-
-//   getcategoriesSection.classList.remove("d-none");
-
-//   await filterManager.getAllIngredients();
-// });
-// const contact = document.querySelector(
-//   ".my-navbar .linkList .links ul li:nth-child(5)"
-// );
-
-// const contactUs = document.getElementById("contactUs");
-
-// contact.addEventListener("click", () => {
-//   openCloseNavbar();
-//   allMealsSection.classList.add("d-none");
-//   searchForMael.classList.add("d-none");
-//   detailsSection.classList.add("d-none");
-//   getcategoriesSection.classList.add("d-none");
-
-//   contactUs.classList.remove("d-none");
-
-//   const validator = new FormValidator();
-
-//   const inputs = document.querySelectorAll("#contactUs input");
-
-//   inputs.forEach((input) => {
-//     input.addEventListener("keyup", ({ target }) => {
-//       validator.validate(target);
-//     });
-//   });
-// });
+//!==============================  End Event Listeners  ==============================!//

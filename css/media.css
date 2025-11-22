@@ -1,0 +1,25 @@
+@media screen and (min-width: 768px) {
+  .my-navbar {
+    max-width: 33%;
+  }
+  main {
+    margin-right: 25px;
+  }
+  .meal .meal-layer {
+    align-content: flex-start;
+  }
+}
+@media screen and (min-width: 992px) {
+  .my-navbar {
+    max-width: 23%;
+  }
+  main {
+    margin-right: 85px;
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  .my-navbar {
+    max-width: 13%;
+  }
+}

@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Yummy</title>
+    <!--*=============================================== start link style ===============================================-->
+    <link rel="stylesheet" href="./css/all.min.css" />
+    <link rel="stylesheet" href="./css/bootstrap.min.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/media.css" />
+    <link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon" />
+    <!--*=============================================== start Meta tags for help seo ===============================================-->
+    <meta
+      name="description"
+      content="The new Yummy brings you simple recipes for Yummy’s  highest-rated meals–  so you can make them at home."
+    />
+    <meta
+      name="keywords"
+      content="Yummy, recipes,meals ,make recipes at home"
+    />
+  </head>
+  <body>
+    <!--*=============================================== start Side Navbar section ===============================================-->
+    <nav
+      class="my-navbar my-d-none-navbar d-flex flex-wrap justify-content-between"
+    >
+      <div class="linkList w-75 d-flex flex-wrap p-3">
+        <div class="links">
+          <ul class="list-unstyled overflow-hidden">
+            <li class="py-2 cursor-pointer">Search</li>
+            <li class="py-2 cursor-pointer">Categories</li>
+            <li class="py-2 cursor-pointer">Area</li>
+            <li class="py-2 cursor-pointer">Ingredients</li>
+            <li class="py-2 cursor-pointer">Contact Us</li>
+          </ul>
+        </div>
+        <div class="nav-footer mt-auto">
+          <div class="icons">
+            <i class="fa-brands fa-facebook"></i>
+            <i class="fa-brands fa-twitter"></i>
+            <i class="fa-solid fa-globe"></i>
+          </div>
+          <div class="footer">
+            <p>Copyright Â© 2019 All Rights Reserved.</p>
+          </div>
+        </div>
+      </div>
+      <div
+        class="main-nav d-flex flex-wrap justify-content-between flex-column align-items-center py-3 pe-2"
+      >
+        <a href="./index.html">
+          <div class="logo">
+            <img src="./images/logo.png" alt="Yummy logo" />
+          </div>
+        </a>
+        <div class="bar cursor-pointer">
+          <i class="fa-solid fa-bars fa-2x"></i>
+        </div>
+        <div>
+          <i class="fa-solid fa-globe d-block"></i>
+          <i class="fa-solid fa-share-nodes"></i>
+        </div>
+      </div>
+    </nav>
+    <!--*===============================================  End Side Navbar section  ===============================================-->
+    <main>
+      <!--*=============================================== Start search for meals by name or first leter section ===============================================-->
+      <section class="search-for-mael d-none" id="search-for-mael">
+        <div class="container w-75">
+          <div class="row py-4 g-3">
+            <div class="col-lg-6">
+              <input
+                class="form-control bg-transparent text-white"
+                type="text"
+                placeholder="Search By Name"
+                id="SearchByName"
+              />
+            </div>
+            <div class="col-lg-6">
+              <input
+                maxlength="1"
+                class="form-control bg-transparent text-white"
+                type="text"
+                placeholder="Search By First Letter"
+                id="SearchByFirstLetter"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+      <!--*===============================================  End search for meals by name or first leter section ===============================================-->
+      <!--*=============================================== Start all meals section ===============================================-->
+      <section class="allMeals py-5">
+        <div class="container">
+          <div
+            class="row row-cols-1 row-cols-md-4 g-4"
+            id="meal-container"
+          ></div>
+        </div>
+      </section>
+      <!--*===============================================  End all meals section ===============================================-->
+      <!--*=============================================== Start meal details section ===============================================-->
+      <section class="details d-none">
+        <div class="container">
+          <div class="d-flex flex-wrap justify-content-end pt-2">
+            <button class="btn btn-outline-danger">
+              <i class="fa-solid fa-xmark"></i>
+            </button>
+          </div>
+          <div class="row py-5 ps-3 g-4">
+            <div class="col-md-4">
+              <img
+                class="w-100 rounded-3"
+                src="./images/utqnjv1763598650.jpg"
+                alt="kabsa image"
+              />
+              <h2 class="meal-title">kabse</h2>
+            </div>
+            <div class="col-md-8">
+              <div class="instructions">
+                <h2>Instructions</h2>
+                <p>
+                  1 Caramelize the chicken with olive oil then add a maggi cube
+                  and boil it for around 30 minutes. 2 In another pot, add all
+                  the veggies and caramelize them till they are soft. 3 Once
+                  everything is done, add the rice, raisins &amp; spices to the
+                  veggies and add 2 and a half cups of water for the rice to
+                  cook. 4 Once the rice is done put everything in the oven.
+                </p>
+              </div>
+              <div class="area-and-category">
+                <h3></h3>
+                <h3></h3>
+              </div>
+              <div class="recipes">
+                <h3>Recipes :</h3>
+                <ul class="list-unstyled d-flex g-3 flex-wrap"></ul>
+              </div>
+              <div class="tags">
+                <h3>Tags :</h3>
+                <ul class="list-unstyled d-flex g-3 flex-wrap"></ul>
+              </div>
+
+              <a target="_blank" href="#" class="btn btn-success">Source</a>
+              <a target="_blank" href="#" class="btn btn-danger">Youtube</a>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!--*===============================================  End meal details section ===============================================-->
+      <!--*=============================================== Start categories area meal section ===============================================-->
+      <section id="categoriesAreaIngredients" class="d-none">
+        <div class="container">
+          <div class="row py-5 g-4"></div>
+        </div>
+      </section>
+      <!--*===============================================  End categories meal section ===============================================-->
+      <!--*=============================================== Start Contact Us section ===============================================-->
+      <section
+        id="contactUs"
+        class="vh-100 d-flex flex-wrap justify-content-center align-items-center d-none"
+      >
+        <div class="container w-75 text-center">
+          <div class="row g-4">
+            <div class="col-md-6">
+              <input
+                id="nameInput"
+                type="text"
+                class="form-control"
+                placeholder="Enter Your Name"
+              />
+              <div id="nameAlert" class="alert alert-danger w-100 mt-2 d-none">
+                Special characters and numbers not allowed
+              </div>
+            </div>
+            <div class="col-md-6">
+              <input
+                id="emailInput"
+                type="email"
+                class="form-control"
+                placeholder="Enter Your Email"
+              />
+              <div id="emailAlert" class="alert alert-danger w-100 mt-2 d-none">
+                Email not valid *exemple@yyy.zzz
+              </div>
+            </div>
+            <div class="col-md-6">
+              <input
+                id="phoneInput"
+                type="text"
+                class="form-control"
+                placeholder="Enter Your Phone"
+              />
+              <div id="phoneAlert" class="alert alert-danger w-100 mt-2 d-none">
+                Enter valid Phone Number
+              </div>
+            </div>
+            <div class="col-md-6">
+              <input
+                id="ageInput"
+                type="number"
+                class="form-control"
+                placeholder="Enter Your Age"
+              />
+              <div id="ageAlert" class="alert alert-danger w-100 mt-2 d-none">
+                Enter valid age
+              </div>
+            </div>
+            <div class="col-md-6">
+              <input
+                id="passwordInput"
+                type="password"
+                class="form-control"
+                placeholder="Enter Your Password"
+              />
+              <div
+                id="passwordAlert"
+                class="alert alert-danger w-100 mt-2 d-none"
+              >
+                Enter valid password *Minimum eight characters, at least one
+                letter and one number:*
+              </div>
+            </div>
+            <div class="col-md-6">
+              <input
+                id="repasswordInput"
+                type="password"
+                class="form-control"
+                placeholder="Repassword"
+              />
+              <div
+                id="repasswordAlert"
+                class="alert alert-danger w-100 mt-2 d-none"
+              >
+                Enter valid repassword
+              </div>
+            </div>
+          </div>
+          <button
+            id="submitBtn"
+            class="btn btn-outline-danger px-2 mt-3 disabled"
+          >
+            Submit
+          </button>
+        </div>
+      </section>
+      <!--*===============================================  End Contact Us section ===============================================-->
+      <!--*=============================================== Start loading spinner section ===============================================-->
+      <div class="loading d-none">
+        <span class="loader"></span>
+      </div>
+      <!--*===============================================  End loading spinner section ===============================================-->
+    </main>
+    <!--*===============================================  Start JS links ===============================================-->
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    <script type="module" src="./js/main.js"></script>
+    <!--*===============================================   End JS links ===============================================-->
+  </body>
+</html>
